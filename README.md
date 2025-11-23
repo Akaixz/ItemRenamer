@@ -1,5 +1,6 @@
+
 # ItemRenamer
-A Synthesis Patcher for Skyrim that adjusts item and spell names to match those specified in one or more user configurable files, usually to facilitate better inventory sorting.
+A Synthesis Patcher for Fallout 4 that adjusts item names to match those specified in one or more user configurable files, usually to facilitate better inventory sorting.
 
 A default config file is provided with support for the vanilla game and DLC. I also include definitions for a few mods that I personally use.
 
@@ -7,9 +8,18 @@ A default config file is provided with support for the vanilla game and DLC. I a
 - Beyond Skyrim - Bruma
 - Mysticism
 
+# Supported record types
+- Weapons (`IWeaponGetter`)
+- Ammunition (`IAmmunitionGetter`)
+- Armor (`IArmorGetter`)
+- Books (`IBookGetter`)
+- Object Modifications (`IAObjectModificationGetter`)
+- Components (`IComponentGetter`)
+- Misc items (`IMiscItemGetter`)
+
 # Configuration
 To add suport for additional mods, or to change a name definition, simply create one or more json files in the patcher data directory, and they will be read in alphabetical order by file name.
-For instance, you could create a file called CustomRules.json in the ```C:/../Synthesis/Data/Skyrim Special Edition/ItemRenamer``` directory.
+For instance, you could create a file called CustomRules.json in the ```C:/../Synthesis/Data/Fallout 4/ItemRenamer``` directory.
 
 If, for instance, you wanted to change the name of the gold item from Gold to Septim, you could put:
 

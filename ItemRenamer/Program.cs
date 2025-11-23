@@ -1,6 +1,6 @@
 using Mutagen.Bethesda;
 using Mutagen.Bethesda.Synthesis;
-using Mutagen.Bethesda.Skyrim;
+using Mutagen.Bethesda.Fallout4;
 using Mutagen.Bethesda.Plugins;
 using Mutagen.Bethesda.Plugins.Records;
 using Mutagen.Bethesda.Plugins.Aspects;
@@ -16,34 +16,30 @@ namespace ItemRenamer
         public static async Task<int> Main(string[] args)
         {
             return await SynthesisPipeline.Instance
-                .AddPatch<ISkyrimMod, ISkyrimModGetter>(RunPatch)
-                .SetTypicalOpen(GameRelease.SkyrimSE, "ItemRenamer.esp")
+                .AddPatch<IFallout4Mod, IFallout4ModGetter>(RunPatch)
+                .SetTypicalOpen(GameRelease.Fallout4, "ItemRenamer-Fallout.esp")
                 .Run(args);
         }
 
-        public static void RunPatch(IPatcherState<ISkyrimMod, ISkyrimModGetter> state)
+        public static void RunPatch(IPatcherState<IFallout4Mod, IFallout4ModGetter> state)
         {
             BuildDatabase(state);
 
-            // Run the patch for each record type
+            // Run the patch for the defined record types
+            ProcessNames<IWeaponGetter>(state);
             ProcessNames<IAmmunitionGetter>(state);
             ProcessNames<IArmorGetter>(state);
             ProcessNames<IBookGetter>(state);
-            ProcessNames<IIngestibleGetter>(state);
-            ProcessNames<IIngredientGetter>(state);
-            ProcessNames<ILightGetter>(state);
-            ProcessNames<IMiscItemGetter>(state);
-            ProcessNames<IScrollGetter>(state);
-            ProcessNames<ISoulGemGetter>(state);
-            ProcessNames<ISpellGetter>(state);
-            ProcessNames<IWeaponGetter>(state);
+            ProcessNames<IAObjectModificationGetter>(state);
+            ProcessNames<IComponentGetter>(state);
+            ProcessNames<IMiscItemGetter>(state); 
         }
 
         // Generic method to patch a specific record that is part of a specified getter interface
-        public static void ProcessNames<TMajor>(IPatcherState<ISkyrimMod, ISkyrimModGetter> state)
+        public static void ProcessNames<TMajor>(IPatcherState<IFallout4Mod, IFallout4ModGetter> state)
             where TMajor : IMajorRecordGetter, INamedGetter
         {
-            foreach (var item in state.LoadOrder.PriorityOrder.WinningOverrideContexts<ISkyrimMod, ISkyrimModGetter>(state.LinkCache, typeof(TMajor)))
+            foreach (var item in state.LoadOrder.PriorityOrder.WinningOverrideContexts<IFallout4Mod, IFallout4ModGetter>(state.LinkCache, typeof(TMajor)))
             {
                 if (dictionary.TryGetValue(item.Record.FormKey, out var replacementName))
                 {
@@ -55,7 +51,7 @@ namespace ItemRenamer
 
 
         // Build the dictionary to map formIDs to Names
-        private static void BuildDatabase(IPatcherState<ISkyrimMod, ISkyrimModGetter> state)
+        private static void BuildDatabase(IPatcherState<IFallout4Mod, IFallout4ModGetter> state)
         {
             // First merge default configs
             JObject? finalJson = new();
