@@ -11,7 +11,7 @@
 
 ## Description
 
-**ItemRenamer** is a Synthesis Patcher for Fallout 4 designed to adjust item names to match those specified in user-configurable files. Its primary goal is to facilitate is to have a tool to change item names based on custom renaming rules.
+**ItemRenamer** is a Synthesis Patcher for Fallout 4 designed to adjust item names to match those specified in user-configurable files. Its primary goal is to facilitate item renaming based on custom renaming rules.
 
 A default config file is provided with support for **FJX-Imperium** and **MCPR 300**, serving as a base for future renamings.
 
