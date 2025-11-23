@@ -30,7 +30,7 @@ namespace ItemRenamer
             ProcessNames<IAmmunitionGetter>(state);
             ProcessNames<IArmorGetter>(state);
             ProcessNames<IBookGetter>(state);
-            ProcessNames<IAObjectModificationGetter>(state);
+            //ProcessNames<IAObjectModificationGetter>(state);
             ProcessNames<IComponentGetter>(state);
             ProcessNames<IMiscItemGetter>(state); 
         }

@@ -13,7 +13,6 @@ A default config file is provided with support for FJX-Imperium and MCPR 300. Us
 - Ammunition (`IAmmunitionGetter`)
 - Armor (`IArmorGetter`)
 - Books (`IBookGetter`)
-- Object Modifications (`IAObjectModificationGetter`)
 - Components (`IComponentGetter`)
 - Misc items (`IMiscItemGetter`)
 
