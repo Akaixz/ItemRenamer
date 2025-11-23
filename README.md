@@ -11,7 +11,7 @@
 
 ## Description
 
-**ItemRenamer** is a Synthesis Patcher for Fallout 4 designed to adjust item names to match those specified in user-configurable files. Its primary goal is to facilitate better inventory sorting through custom renaming rules.
+**ItemRenamer** is a Synthesis Patcher for Fallout 4 designed to adjust item names to match those specified in user-configurable files. Its primary goal is to facilitate is to have a tool to change item names based on custom renaming rules.
 
 A default config file is provided with support for **FJX-Imperium** and **MCPR 300**, serving as a base for future renamings.
 
@@ -28,12 +28,12 @@ A default config file is provided with support for **FJX-Imperium** and **MCPR 3
 - MW2022 - FJX-Imperium
 
 ### Supported Record Types
-- 🔫 Weapons (`IWeaponGetter`)
-- 💊 Ammunition (`IAmmunitionGetter`)
-- 🛡️ Armor (`IArmorGetter`)
-- 📚 Books (`IBookGetter`)
-- ⚙️ Components (`IComponentGetter`)
-- 📦 Misc items (`IMiscItemGetter`)
+- 🔫 Weapons
+- 💊 Ammunition
+- 🛡️ Armor
+- 📚 Books
+- ⚙️ Components
+- 📦 Misc items
 
 ---
 
@@ -56,3 +56,11 @@ If you want to change the name of the "10mm" item from *Gold* to *10mm Cool Pist
 {
   "004822:Fallout4.esm": "10mm Cool Pistol"
 }
+```
+- 004822: The FormID of the item (as seen in xEdit).
+
+- Fallout4.esm: The Plugin or Master file where the item is defined.
+
+- 10mm Cool Pistol: The new desired name.
+
+Note: Remember to add commas after every line except the last one, and ensure the file is enclosed in opening { and closing } braces. You can browse the Default folder in the patcher data directory for more examples.
