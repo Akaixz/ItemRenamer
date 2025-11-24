@@ -26,6 +26,9 @@ A default config file is provided with support for **FJX-Imperium** and **MCPR 3
 ### Currently Supported Mods
 - MW2022 - MCPR 300 - Barrett MRAD
 - MW2022 - FJX-Imperium
+- MWIII - Aug Platform REDUX
+- MW2023 - M4 Platform 2.0
+- MW2023 - Scar Platform Redux
 
 ### Supported Record Types
 - 🔫 Weapons
