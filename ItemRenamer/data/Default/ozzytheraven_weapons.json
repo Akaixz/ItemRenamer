@@ -4,5 +4,23 @@
   "002090:Ozzys_MCPR-300.esp": "Barrett MRAD - Body Count",
   "002091:Ozzys_MCPR-300.esp": "Barrett MRAD - Duster",
   "0020A6:Ozzys_MCPR-300.esp": "Barrett MRAD - Watchdog 141",
-  "0020B7:Ozzys_MCPR-300.esp": "Barrett MRAD - Sequoia"
+  "0020B7:Ozzys_MCPR-300.esp": "Barrett MRAD - Sequoia",
+
+  "007FA4:Ozzys_Taq_Platform.esp": "FN SCAR-H",
+  "007FA5:Ozzys_Taq_Platform.esp": "FN SCAR-L",
+  "007FA6:Ozzys_Taq_Platform.esp": "FN SCAR 20s",
+
+  "000F9D:Ozzys_M4_Platform.esp": "M4",
+  "006F51:Ozzys_M4_Platform.esp": "AR-15",
+  "007471:Ozzys_M4_Platform.esp": "M16",
+  "0074F4:Ozzys_M4_Platform.esp": "AR-57",
+  "007570:Ozzys_M4_Platform.esp": "Fightlite MCR",
+
+  "000F9D:Ozzys_Aug_Family.esp": "Steyr AUG A3",
+  "00703A:Ozzys_Aug_Family.esp": "Steyr AUG HBAR-T",
+  "00721A:Ozzys_Aug_Family.esp": "Steyr AUG A3 XS",
+  "007ABA:Ozzys_Aug_Family.esp": "Steyr AUG A3",
+  "007ABB:Ozzys_Aug_Family.esp": "Steyr AUG HBAR-T",
+  "007ABC:Ozzys_Aug_Family.esp": "Steyr AUG A3 XS"
+
 }
